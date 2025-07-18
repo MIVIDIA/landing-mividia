@@ -293,10 +293,9 @@
         
         .testimonial-section {
             background: transparent;
-            padding: 40px 0;
+            padding: 40px 20px; /* Espaciado vertical + algo de aire lateral en móviles */
             margin: 0 auto;
-            max-width: 800px;
-            border: none;
+            width: 100%;
             font-family: 'Montserrat', sans-serif;
         }
         
@@ -308,13 +307,13 @@
             background: rgba(76, 92, 255, 0.1);
             border: 1px solid rgba(76, 92, 255, 0.2);
             border-radius: 8px;
-            padding: 30px 25px;
+            padding: 30px 40px;
             font-size: 1.1rem;
             line-height: 1.6;
             color: #333;
-            max-width: 700px;
-            margin: 0 auto;
+            width: 100%;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .testimonial-quote {
@@ -326,7 +325,6 @@
         
         .testimonial-content-new p {
             margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             text-align: left;
         }
@@ -339,6 +337,7 @@
             font-weight: 700;
             color: #333;
         }
+
 
 
         /* Consultoría Section */
@@ -439,33 +438,7 @@
             border: none !important;
         }
         
-        /* Ocultar elementos específicos de Tally */
-        .tally-branding,
-        .tally-footer,
-        .tally-powered-by,
-        [class*="tally-branding"],
-        [class*="tally-footer"],
-        [class*="tally-powered"],
-        [data-testid*="branding"],
-        [data-testid*="footer"],
-        [data-testid*="powered"] {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            height: 0 !important;
-            overflow: hidden !important;
-        }
-        
-        /* Ocultar líneas divisorias */
-        .form-container iframe hr,
-        .form-container iframe [role="separator"],
-        .form-container iframe .divider,
-        .form-container iframe [class*="divider"],
-        .form-container iframe [class*="separator"] {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
+    
         /* Why Choose AI Avatars Section */
         .why-ai-avatars {
             padding: 80px 0;
@@ -642,18 +615,23 @@
                 grid-template-columns: 1fr;
             }
 
-                   .video-wrapper {
+            .video-wrapper {
                 margin-bottom: 30px;
             }
             
-             .testimonial-content-new {
-                padding-left: 20px;
+            .testimonial-content-new {
+                padding: 20px;
                 font-size: 1rem;
-            }
+          }
+        
+          .testimonial-quote {
+            font-size: 1.1rem;
+          }
+        
+          .testimonial-content-new p {
+            font-size: 0.95rem;
+          }
             
-            .testimonial-quote {
-                font-size: 1.1rem;
-            }
 
             .header-content {
                 flex-direction: column;
