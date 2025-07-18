@@ -206,6 +206,73 @@
             margin-bottom: 0;
         }
 
+        /* Sección de video demo 
+
+        .video-testimonial-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .video-side {
+            width: 100%;
+        }
+        
+        .video-wrapper {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .testimonial-side {
+            padding: 30px;
+        }
+        
+        .testimonial-content {
+            background: rgba(76, 92, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .testimonial-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #4C5CFF;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #0C1B34;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            color: #4C5CFF;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+
         /* Eliminar estilos de grid y iconos antiguos */
         .process-guaranteed .features-grid,
         .process-guaranteed .feature-item,
@@ -602,6 +669,24 @@
             .consultoria-features {
                 grid-template-columns: 1fr;
             }
+
+                    .video-testimonial-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .testimonial-side {
+                padding: 0;
+            }
+            
+            .testimonial-content {
+                padding: 30px;
+            }
+            
+            .testimonial-text {
+                font-size: 1rem;
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -687,22 +772,35 @@
 
     <!-- Video Demo -->
     <section class="video-demo">
-        <div class="container">
-            <h2>Mira cómo funciona</h2>
-            <div class="video-wrapper">
-                <video controls width="100%">
-                    <source src="./videos/AS en la Dieta - Apps 720.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
+    <div class="container">
+        <h2>Mira cómo funciona</h2>
+        <div class="video-testimonial-container">
+            <div class="video-side">
+                <div class="video-wrapper">
+                    <video controls width="100%">
+                        <source src="./videos/AS en la Dieta - Apps 720.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
             </div>
-            <div class="testimonial-section">
-                <h3>Testimonio de AS en la Dieta</h3>
+            <div class="testimonial-side">
                 <div class="testimonial-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <h3>Testimonio de AS en la Dieta</h3>
+                    <div class="testimonial-text">
+                        "Desde que trabajo con el servicio de mividia me pregunto por qué no lo hice antes… como autónoma y madre emprendedora el ocuparme de los portales online siempre ha sido una preocupación y una tarea difícil de cubrir; son una pieza clave para ayudarme a transmitir el mensaje de mi marca personal que me libera carga mental y de trabajo, disponiendo de más tiempo que puedo emplear en otras tareas. 
+                        <br><br>
+                        Además, gracias al estudio y consultoría personal que han hecho de mi marca he podido mejorar mi posicionamiento y estrategia en RRSS llegando a más personas sin perder mi esencia. Me han atendido siempre de una forma muy cercana y comprensiva, resolviendo hasta la duda "más tonta" que tengo. 
+                        <br><br>
+                        Si necesitas darte visibilidad sin perder tiempo y lanzar tu proyecto online contar con mividia es la mejor inversión que puedes hacer."
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>- AS en la Dieta</strong>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Consultoría Section -->
     <section class="consultoria-section">
