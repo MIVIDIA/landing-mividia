@@ -206,7 +206,38 @@
             margin-bottom: 0;
         }
 
-        /* Sección de video demo 
+        /* Eliminar estilos de grid y iconos antiguos */
+        .process-guaranteed .features-grid,
+        .process-guaranteed .feature-item,
+        .process-guaranteed .feature-item .feature-icon,
+        .process-guaranteed .feature-item h3 {
+            display: none; /* Ocultar completamente los elementos antiguos */
+        }
+
+        .process-guaranteed .guarantee-text {
+            font-style: italic;
+            color: #0C1B34;
+            margin-top: 20px;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(135deg, #FF6F61, #FF8A7A);
+            padding: 20px 0;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 111, 97, 0.3);
+        }
+
+        .urgency-banner p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Video Demo */
 
         .video-testimonial-container {
             display: grid;
@@ -270,93 +301,6 @@
             color: #4C5CFF;
             font-size: 1.1rem;
             margin-top: 15px;
-        }
-
-
-        /* Eliminar estilos de grid y iconos antiguos */
-        .process-guaranteed .features-grid,
-        .process-guaranteed .feature-item,
-        .process-guaranteed .feature-item .feature-icon,
-        .process-guaranteed .feature-item h3 {
-            display: none; /* Ocultar completamente los elementos antiguos */
-        }
-
-        .process-guaranteed .guarantee-text {
-            font-style: italic;
-            color: #0C1B34;
-            margin-top: 20px;
-        }
-
-        /* Urgency Banner */
-        .urgency-banner {
-            background: linear-gradient(135deg, #FF6F61, #FF8A7A);
-            padding: 20px 0;
-            text-align: center;
-            margin: 50px 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(255, 111, 97, 0.3);
-        }
-
-        .urgency-banner p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* Video Demo */
-        .video-demo {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .video-demo h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: #4C5CFF;
-        }
-
-        .video-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .testimonial-section {
-            background: rgba(76, 92, 255, 0.05);
-            padding: 40px;
-            border-radius: 15px;
-            margin-top: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .testimonial-section h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #4C5CFF;
-            text-align: center;
-        }
-
-        .testimonial-content {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: #0C1B34;
-            text-align: center;
-            line-height: 1.6;
         }
 
         /* Consultoría Section */
@@ -629,6 +573,8 @@
             border-top: 1px solid rgba(76, 92, 255, 0.2);
             color: #0C1B34;
         }
+
+        
 
         /* Responsive */
         @media (max-width: 768px) {
