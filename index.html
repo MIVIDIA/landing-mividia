@@ -6,7 +6,7 @@
     <title>MIVIDIA - Videos profesionales para tu negocio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Hotjar Tracking Code for https://rzrwmypp.manus.space/ -->
- <script>
+    <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:6462586,hjsv:6};
@@ -251,17 +251,108 @@
             color: #4C5CFF;
         }
 
-        .video-placeholder {
-            background: rgba(76, 92, 255, 0.1);
-            border: 2px dashed #4C5CFF;
-            border-radius: 15px;
-            padding: 80px 20px;
-            margin: 0 auto;
+        .video-wrapper {
             max-width: 800px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .video-placeholder p {
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .testimonial-section {
+            background: rgba(76, 92, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #4C5CFF;
+            text-align: center;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #0C1B34;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Consultoría Section */
+        .consultoria-section {
+            padding: 80px 0;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .consultoria-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4C5CFF;
+        }
+
+        .consultoria-intro {
+            text-align: center;
             font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #0C1B34;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .consultoria-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .consultoria-feature {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+            text-align: center;
+        }
+
+        .consultoria-feature h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #4C5CFF;
+        }
+
+        .consultoria-feature p {
+            color: #0C1B34;
+            line-height: 1.6;
+        }
+
+        .consultoria-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .consultoria-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
             color: #0C1B34;
         }
 
@@ -507,16 +598,19 @@
             .container {
                 padding: 0 15px;
             }
+
+            .consultoria-features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-    
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo"><img src="images/MIVIDIA (1).png" alt="MIVIDIA Logo"></a>
+                <a href="#" class="logo"><img src="./images/MIVIDIA (1).png" alt="MIVIDIA Logo" style="height: 60px;"></a>
                 <a href="#form" class="cta-button">Quiero mi video de prueba por 10 €</a>
             </div>
         </div>
@@ -525,8 +619,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Consigue videos profesionales para tu negocio SIN aparecer en cámara (Listo en 72h)</h1>
-            <p>Presentador virtual realista + guión optimizado + edición profesional. Tu competencia sigue gastando € en productoras tradicionales.</p>
+        <h1>Consigue videos profesionales para tu negocio SIN aparecer en cámara
+            (Listo en 72h)</h1>
+        <p>Presentador virtual realista + guión optimizado + edición profesional. Tu competencia sigue gastando € en productoras tradicionales.</p>
             <a href="#form" class="cta-button">Quiero mi video de prueba por 10 €</a>
         </div>
     </section>
@@ -546,8 +641,8 @@
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">🤖</div>
-                    <h3>Presentador virtual profesional</h3>
-                    <p>Elige entre presentadores con apariencia profesional y natural</p>
+                    <h3>Avatar IA realista</h3>
+                    <p>Elige entre avatares masculinos y femeninos con apariencia profesional y natural</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
@@ -568,33 +663,16 @@
         </div>
     </section>
 
-    <!-- Consulting Section -->
-    <section class="consulting">
+    <!-- Conoce MIVIDIA Video -->
+    <section class="conoce-mividia-video">
         <div class="container">
-            <h2>Consultoría Estratégica de Video Marketing</h2>
-            <p>Además de entregar tu video, te guiamos sobre cómo, cuándo y dónde publicarlo, y te proporcionamos el copy perfecto para maximizar resultados:</p>
-            <ul>
-                <li>Plan de distribución personalizado</li>
-                <li>Script y copy optimizados para tu audiencia</li>
-                <li>Recomendaciones de hashtags y llamadas a la acción</li>
-                <li>Seguimiento de métricas y asesoramiento continuo</li>
-            </ul>
-            <p>Elige tu paquete de consultoría: <strong>Básica (149€)</strong>, <strong>Mensual (399€)</strong> o <strong>Integral (999€)</strong> para mayor soporte.</p>
-        </div>
-    </section>
-
-    <!-- Video Demo Section -->
-    <section class="video-demo">
-        <div class="container">
-            <h2>Mira cómo podría quedar</h2>
-            <video controls width="100%">
-                <source src="./videos/AS en la Dieta - Apps 720.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-            <blockquote>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”<br>
-                <cite>– AS en la Dieta</cite>
-            </blockquote>
+            <h2>Conoce MIVIDIA</h2>
+            <div class="video-wrapper">
+                <video controls width="100%">
+                    <source src="./videos/MIVIDIA_Presentacion.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
         </div>
     </section>
 
@@ -605,7 +683,7 @@
             <ul class="process-list">
                 <li>Tecnología de última generación</li>
                 <li>Avatares ultra-realistas</li>
-                <li>Entrega garantizada en 48h</li>
+                <li>Entrega garantizada en 72h</li>
                 <li>Guión profesional incluido</li>
                 <li>Formatos optimizados para todas las plataformas</li>
             </ul>
@@ -624,9 +702,49 @@
     <section class="video-demo">
         <div class="container">
             <h2>Mira cómo funciona</h2>
-            <div class="video-placeholder">
-                <p>🎬 Video demo próximamente</p>
-                <p>Aquí podrás ver ejemplos reales de videos creados con nuestros avatares IA</p>
+            <div class="video-wrapper">
+                <video controls width="100%">
+                    <source src="./videos/AS en la Dieta - Apps 720.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="testimonial-section">
+                <h3>Testimonio de AS en la Dieta</h3>
+                <div class="testimonial-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultoría Section -->
+    <section class="consultoria-section">
+        <div class="container">
+            <h2>🎯 PERO ESO NO ES TODO: CONSULTORÍA INCLUIDA</h2>
+            <div class="consultoria-intro">
+                <p><strong>No solo te hacemos el video, te enseñamos exactamente CÓMO, CUÁNDO y DÓNDE usarlo para maximizar resultados.</strong></p>
+            </div>
+            <div class="consultoria-features">
+                <div class="consultoria-feature">
+                    <h3>📍 DÓNDE Publicar</h3>
+                    <p>Te decimos exactamente en qué plataformas publicar tu video según tu audiencia objetivo (LinkedIn, Instagram, Facebook, YouTube, etc.)</p>
+                </div>
+                <div class="consultoria-feature">
+                    <h3>⏰ CUÁNDO Publicar</h3>
+                    <p>Horarios específicos y días de la semana con mayor engagement para tu sector y audiencia</p>
+                </div>
+                <div class="consultoria-feature">
+                    <h3>📝 QUÉ Texto Usar</h3>
+                    <p>Copy optimizado para acompañar tu video, incluyendo call-to-actions efectivos y hashtags relevantes</p>
+                </div>
+                <div class="consultoria-feature">
+                    <h3>📊 CÓMO Medir Resultados</h3>
+                    <p>Métricas específicas a seguir y cómo interpretar los datos para optimizar futuras campañas</p>
+                </div>
+            </div>
+            <div class="consultoria-cta">
+                <p><strong>Tu competencia solo tiene el video. Tú tendrás el video + la estrategia completa de distribución.</strong></p>
+                <p>Esto es lo que realmente marca la diferencia entre un video que se ve bonito y un video que genera resultados reales.</p>
             </div>
         </div>
     </section>
@@ -634,9 +752,9 @@
     <!-- Form Section -->
     <section class="form-section" id="form">
         <div class="container">
-            <h2>Solicita tu video demo por solo 10 €</h2>
+            <h2>Quiero mi video de prueba por 10 €</h2>
             <div class="form-container">
-                <iframe data-tally-src="https://tally.so/r/w2dGYL?transparentBackground=1" width="100%" height="500" frameborder="0" scrolling="no" title="Solicita tu demo por 10 €"></iframe>
+                <iframe data-tally-src="https://tally.so/r/w2dGYL?transparentBackground=1" width="100%" height="500" frameborder="0" scrolling="no" title="Quiero mi video de prueba por 10 €"></iframe>
                 <script>var d=document,w=window,n=d.documentElement,v=d.body,o=d.createElement('script');o.async=true;o.src='https://tally.so/widgets/embed.js';o.onload=function(){if(typeof Tally==='object'){Tally.loadEmbeds()}};v.appendChild(o);</script>
             </div>
         </div>
@@ -645,7 +763,7 @@
     <!-- Why Choose AI Avatars -->
     <section class="why-ai-avatars">
         <div class="container">
-            <h2>🎯 ¿POR QUÉ ELEGIR AVATARES IA?</h2>
+            <h2>🎯 ¿POR QUÉ ELEGIR PRESENTADOR VIRTUAL PROFESIONAL?</h2>
             <div class="stats-grid">
                 <div class="stat-item">
                     <p>"93% de marketers reportan ROI positivo con video marketing"</p>
@@ -670,8 +788,7 @@
             <h2>🛡️ GARANTÍA TOTAL</h2>
             <div class="guarantee-points">
                 <p>✅ 100% satisfecho o devolvemos dinero</p>
-
-                <p>✅ Entrega garantizada en 48h</p>
+                <p>✅ Entrega garantizada en 72h</p>
                 <p>✅ Revisiones ilimitadas hasta que quedes contento</p>
             </div>
             <p class="guarantee-text">*Estamos tan seguros de la calidad que asumimos todo el riesgo*</p>
@@ -689,8 +806,8 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">¿Realmente entregan en 48 horas?</div>
-                <div class="faq-answer">Sí, garantizamos la entrega en máximo 48 horas laborables desde que confirmas tu pedido y proporcionas toda la información necesaria. La mayoría de videos se entregan incluso antes.</div>
+                <div class="faq-question">¿Realmente entregan en 72 horas?</div>
+                <div class="faq-answer">Sí, garantizamos la entrega en máximo 72 horas laborables desde que confirmas tu pedido y proporcionas toda la información necesaria. La mayoría de videos se entregan incluso antes.</div>
             </div>
 
             <div class="faq-item">
@@ -702,6 +819,11 @@
                 <div class="faq-question">¿Qué pasa si no tengo logo o materiales de marca?</div>
                 <div class="faq-answer">No hay problema. Nuestro equipo puede trabajar con la información básica de tu empresa y crear un video efectivo. También podemos ayudarte con sugerencias de branding básico.</div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué incluye la consultoría de distribución?</div>
+                <div class="faq-answer">Incluye un plan detallado de dónde, cuándo y cómo publicar tu video, texto optimizado para acompañarlo, hashtags relevantes, y métricas específicas para medir el éxito. Es como tener un consultor de marketing digital incluido.</div>
+            </div>
         </div>
     </section>
 
@@ -711,13 +833,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>MIVIDIA</h3>
-                    <p>Videos promocionales con avatares IA en tiempo récord</p>
+                    <p>Videos promocionales con presentador virtual profesional en tiempo récord</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <a href="mailto:mividia.info@gmail.com">mividia.info@gmail.com</a>
                 </div>
-
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 MIVIDIA. Todos los derechos reservados.</p>
