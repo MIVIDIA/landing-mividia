@@ -6,27 +6,528 @@
     <title>MIVIDIA - Videos profesionales para tu negocio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Hotjar Tracking Code for https://rzrwmypp.manus.space/ -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6462586,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6462586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
     <style>
-        /* Estilos generales omitted for brevity, please refer al stylesheet anterior actualizado */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #0C1B34;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(76, 92, 255, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #4C5CFF;
+            text-decoration: none;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FF6F61, #FF8A7A);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 111, 97, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #4C5CFF, #0C1B34);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #0C1B34;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            text-align: center;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .problem h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #FF6F61;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+        }
+
+        .solution h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4C5CFF;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature {
+            background: rgba(76, 92, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0C1B34;
+        }
+
+        .feature h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #4C5CFF;
+        }
+
+        /* Proceso Garantizado Section */
+        .process-guaranteed {
+            padding: 80px 0;
+            text-align: center;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .process-guaranteed h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #4C5CFF;
+        }
+
+        .process-guaranteed .process-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 30px auto;
+            max-width: 600px;
+        }
+
+        .process-guaranteed .process-list li {
+            background: rgba(76, 92, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #0C1B34;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+        }
+
+        .process-guaranteed .process-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Eliminar estilos de grid y iconos antiguos */
+        .process-guaranteed .features-grid,
+        .process-guaranteed .feature-item,
+        .process-guaranteed .feature-item .feature-icon,
+        .process-guaranteed .feature-item h3 {
+            display: none; /* Ocultar completamente los elementos antiguos */
+        }
+
+        .process-guaranteed .guarantee-text {
+            font-style: italic;
+            color: #0C1B34;
+            margin-top: 20px;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(135deg, #FF6F61, #FF8A7A);
+            padding: 20px 0;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 111, 97, 0.3);
+        }
+
+        .urgency-banner p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Video Demo */
+        .video-demo {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .video-demo h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #4C5CFF;
+        }
+
+        .video-placeholder {
+            background: rgba(76, 92, 255, 0.1);
+            border: 2px dashed #4C5CFF;
+            border-radius: 15px;
+            padding: 80px 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .video-placeholder p {
+            font-size: 1.2rem;
+            color: #0C1B34;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 0;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .form-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4C5CFF;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+        }
+
+        /* Ocultar marca de agua de Tally */
+        iframe[data-tally-src] {
+            border: none !important;
+        }
+        
+        /* Ocultar elementos específicos de Tally */
+        .tally-branding,
+        .tally-footer,
+        .tally-powered-by,
+        [class*="tally-branding"],
+        [class*="tally-footer"],
+        [class*="tally-powered"],
+        [data-testid*="branding"],
+        [data-testid*="footer"],
+        [data-testid*="powered"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+        }
+        
+        /* Ocultar líneas divisorias */
+        .form-container iframe hr,
+        .form-container iframe [role="separator"],
+        .form-container iframe .divider,
+        .form-container iframe [class*="divider"],
+        .form-container iframe [class*="separator"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Why Choose AI Avatars Section */
+        .why-ai-avatars {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .why-ai-avatars h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #4C5CFF;
+        }
+
+        .why-ai-avatars .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .why-ai-avatars .stat-item {
+            background: rgba(76, 92, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+            text-align: left;
+        }
+
+        .why-ai-avatars .stat-item p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #0C1B34;
+        }
+
+        .why-ai-avatars .stat-item span {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #4C5CFF;
+        }
+
+        .why-ai-avatars .coming-soon-text {
+            font-style: italic;
+            color: #0C1B34;
+            margin-top: 20px;
+        }
+
+        /* Garantía Total Section */
+        .total-guarantee {
+            padding: 80px 0;
+            text-align: center;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .total-guarantee h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #4C5CFF;
+        }
+
+        .total-guarantee .guarantee-points p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #0C1B34;
+        }
+
+        .total-guarantee .guarantee-text {
+            font-style: italic;
+            color: #0C1B34;
+            margin-top: 20px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: rgba(76, 92, 255, 0.05);
+        }
+
+        .faq h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4C5CFF;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 92, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #0C1B34;
+            border-bottom: 1px solid rgba(76, 92, 255, 0.2);
+        }
+
+        .faq-answer {
+            padding: 25px;
+            color: #0C1B34;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 0;
+            background: #FFFFFF;
+            border-top: 1px solid rgba(76, 92, 255, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #4C5CFF;
+        }
+
+        .footer-section a {
+            color: #0C1B34;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #4C5CFF;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(76, 92, 255, 0.2);
+            color: #0C1B34;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .problem h2,
+            .solution h2,
+            .video-demo h2,
+            .form-section h2,
+            .testimonials h2,
+            .faq h2 {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
     </style>
+    <!-- Hotjar Tracking Code for https://rzrwmypp.manus.space/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6462586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo"><img src="images/MIVIDIA (1).png" alt="MIVIDIA Logo"></a>
-                <a href="#form" class="cta-button">Quiero mi video de prueba por 10 €</a>
+                <a href="#" class="logo"><img src="./images/MIVIDIA_Logo_1.png" alt="MIVIDIA Logo" style="height: 60px;"></a>
+                <a href="#form" class="cta-button">Solicita tu demo por 10 €</a>
             </div>
         </div>
     </header>
@@ -34,16 +535,17 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Consigue videos profesionales para tu negocio SIN aparecer en cámara (Listo en 72h)</h1>
-            <p>Presentador virtual realista + guión optimizado + edición profesional. Tu competencia sigue gastando € en productoras tradicionales.</p>
-            <a href="#form" class="cta-button">Quiero mi video de prueba por 10 €</a>
+        <h1>Consigue videos profesionales para tu negocio SIN aparecer en cámara
+            (Listo en 48h)</h1>
+        <p>Videos promocionales profesionales con un presentador virtual profesional, entregados en tiempo récord</p>
+            <a href="#form" class="cta-button">Solicita tu demo por 10 €</a>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2>¿Sabes que los videos funcionan pero odias aparecer en cámara o no tienes tiempo?</h2>
+            <h2>¿Sin tiempo ni presupuesto para grabar videos de calidad?</h2>
             <p>Sabemos lo difícil que es crear contenido audiovisual profesional cuando tienes mil cosas que hacer. Los costos de producción, el tiempo de grabación, la coordinación de equipos... Todo eso ya es historia.</p>
         </div>
     </section>
@@ -55,12 +557,12 @@
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">🤖</div>
-                    <h3>Presentador virtual profesional</h3>
-                    <p>Elige entre presentadores con apariencia profesional y natural</p>
+                    <h3>Avatar IA realista</h3>
+                    <p>Elige entre avatares masculinos y femeninos con apariencia profesional y natural</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
-                    <h3>Entrega en 72h</h3>
+                    <h3>Entrega en 48h</h3>
                     <p>Desde que confirmas tu pedido hasta que recibes tu video finalizado</p>
                 </div>
                 <div class="feature">
@@ -77,37 +579,181 @@
         </div>
     </section>
 
-    <!-- Consulting Section -->
-    <section class="consulting">
+    <!-- Conoce MIVIDIA Video -->
+    <section class="conoce-mividia-video">
         <div class="container">
-            <h2>Consultoría Estratégica de Video Marketing</h2>
-            <p>Además de entregar tu video, te guiamos sobre cómo, cuándo y dónde publicarlo, y te proporcionamos el copy perfecto para maximizar resultados:</p>
-            <ul>
-                <li>Plan de distribución personalizado</li>
-                <li>Script y copy optimizados para tu audiencia</li>
-                <li>Recomendaciones de hashtags y llamadas a la acción</li>
-                <li>Seguimiento de métricas y asesoramiento continuo</li>
-            </ul>
-            <p>Elige tu paquete de consultoría: <strong>Básica (149€)</strong>, <strong>Mensual (399€)</strong> o <strong>Integral (999€)</strong> para mayor soporte.</p>
+            <h2>Conoce MIVIDIA</h2>
+            <div class="video-wrapper">
+                <video controls width="100%">
+                    <source src="./videos/MIVIDIA_Presentacion.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
         </div>
     </section>
 
-    <!-- Video Demo Section -->
+    <!-- Proceso Garantizado -->
+    <section class="process-guaranteed">
+        <div class="container">
+            <h2>🎯 PROCESO GARANTIZADO</h2>
+            <ul class="process-list">
+                <li>Tecnología de última generación</li>
+                <li>Avatares ultra-realistas</li>
+                <li>Entrega garantizada en 48h</li>
+                <li>Guión profesional incluido</li>
+                <li>Formatos optimizados para todas las plataformas</li>
+            </ul>
+            <p class="guarantee-text">*Proceso desarrollado tras meses de investigación para garantizar máxima calidad*</p>
+        </div>
+    </section>
+
+    <!-- Urgency Banner -->
+    <section class="urgency-banner">
+        <div class="container">
+            <p>⚡ Date prisa: Solo 10 videos de prueba este mes por 10 €. Oferta limitada.</p>
+        </div>
+    </section>
+
+    <!-- Video Demo -->
     <section class="video-demo">
         <div class="container">
-            <h2>Mira cómo podría quedar</h2>
-            <video controls width="100%">
-                <source src="./videos/AS en la Dieta - Apps 720.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-            <blockquote>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”<br>
-                <cite>– AS en la Dieta</cite>
-            </blockquote>
+            <h2>Mira cómo funciona</h2>
+            <div class="video-placeholder">
+                <p>🎬 Video demo próximamente</p>
+                <p>Aquí podrás ver ejemplos reales de videos creados con nuestros avatares IA</p>
+            </div>
         </div>
     </section>
 
-    <!-- Continúa con el resto de secciones... -->
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2>Solicita tu video demo por solo 10 €</h2>
+            <div class="form-container">
+                <iframe data-tally-src="https://tally.so/r/w2dGYL?transparentBackground=1" width="100%" height="500" frameborder="0" scrolling="no" title="Solicita tu demo por 10 €"></iframe>
+                <script>var d=document,w=window,n=d.documentElement,v=d.body,o=d.createElement('script');o.async=true;o.src='https://tally.so/widgets/embed.js';o.onload=function(){if(typeof Tally==='object'){Tally.loadEmbeds()}};v.appendChild(o);</script>
+            </div>
+        </div>
+    </section>
 
+    <!-- Why Choose AI Avatars -->
+    <section class="why-ai-avatars">
+        <div class="container">
+            <h2>🎯 ¿POR QUÉ ELEGIR AVATARES IA?</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p>"93% de marketers reportan ROI positivo con video marketing"</p>
+                    <span>- Estudio HubSpot 2024</span>
+                </div>
+                <div class="stat-item">
+                    <p>"Los videos aumentan conversión hasta 86% en landing pages"</p>
+                    <span>- Marketing Research Institute</span>
+                </div>
+                <div class="stat-item">
+                    <p>"El 87% de empresarios prefiere no aparecer en cámara"</p>
+                    <span>- Encuesta Emprendedores España 2024</span>
+                </div>
+            </div>
+            <p class="coming-soon-text">*Próximamente: casos de éxito de nuestros primeros clientes*</p>
+        </div>
+    </section>
+
+    <!-- Garantía Total -->
+    <section class="total-guarantee">
+        <div class="container">
+            <h2>🛡️ GARANTÍA TOTAL</h2>
+            <div class="guarantee-points">
+                <p>✅ 100% satisfecho o devolvemos dinero</p>
+
+                <p>✅ Entrega garantizada en 48h</p>
+                <p>✅ Revisiones ilimitadas hasta que quedes contento</p>
+            </div>
+            <p class="guarantee-text">*Estamos tan seguros de la calidad que asumimos todo el riesgo*</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué incluye exactamente el servicio por 10 €?</div>
+                <div class="faq-answer">El demo por 10 € incluye un video de 30-60 segundos con avatar IA, guion personalizado, y entrega en formatos vertical y horizontal. Es una muestra perfecta para que veas la calidad antes de solicitar videos más largos.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Realmente entregan en 48 horas?</div>
+                <div class="faq-answer">Sí, garantizamos la entrega en máximo 48 horas laborables desde que confirmas tu pedido y proporcionas toda la información necesaria. La mayoría de videos se entregan incluso antes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo solicitar cambios en el video?</div>
+                <div class="faq-answer">Para el demo de 10 €, incluimos una revisión menor. Para proyectos más grandes, ofrecemos hasta 2 rondas de revisiones incluidas en el precio.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué pasa si no tengo logo o materiales de marca?</div>
+                <div class="faq-answer">No hay problema. Nuestro equipo puede trabajar con la información básica de tu empresa y crear un video efectivo. También podemos ayudarte con sugerencias de branding básico.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MIVIDIA</h3>
+                    <p>Videos promocionales con avatares IA en tiempo récord</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <a href="mailto:mividia.info@gmail.com">mividia.info@gmail.com</a>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MIVIDIA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Toggle current answer
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+
+        // Initially hide all FAQ answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
