@@ -15,16 +15,6 @@
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
-        document.addEventListener("DOMContentLoaded", function () {
-    const interval = setInterval(() => {
-      const watermark = document.querySelector('[data-tally-open]');
-      if (watermark) {
-        watermark.remove(); // elimina completamente
-        clearInterval(interval); // detiene la búsqueda
-      }
-    }, 300); // intenta cada 300ms
-  });
     </script>
     <style>
         * {
@@ -850,6 +840,19 @@ El contenido profesional parece algo que siempre se deja para después, porque q
         </div>
     </div>
 </section>
+
+    <!-- Script para eliminar la marca de Tally -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const interval = setInterval(() => {
+            const watermark = document.querySelector('[data-tally-open]');
+            if (watermark) {
+                watermark.remove(); // Elimina la marca
+                clearInterval(interval); // Detiene la búsqueda
+            }
+        }, 300); // Intenta cada 300ms hasta encontrarla
+    });
+</script>
 
 
     <!-- Why Choose AI Avatars -->
