@@ -826,32 +826,29 @@ El contenido profesional parece algo que siempre se deja para después, porque q
 
         
     <!-- Form Section -->
-    <section class="form-section" id="form">
-        <div class="container">
-            <h2>Quiero mi video de prueba por 10 €</h2>
-            <div class="form-container">
-                <iframe 
-                data-tally-src="https://tally.so/r/w2dGYL?transparentBackground=1" 
-                data-tally-auto-resize="1"
-                width="100%" 
-                frameborder="0" 
-                scrolling="no" 
-                title="Quiero mi video de prueba por 10 €">
-                </iframe>
-                <script>
-                var d = document, w = window, n = d.documentElement, v = d.body, o = d.createElement('script');
-                o.async = true;
-                o.src = 'https://tally.so/widgets/embed.js';
-                o.onload = function () {
-                    if (typeof Tally === 'object') {
-                        Tally.loadEmbeds();
-                    }
-                };
-                v.appendChild(o);
-            </script>
+   <section class="form-section" id="form">
+    <div class="container">
+        <h2>Quiero mi video de prueba por 10 €</h2>
+        <div class="form-container">
+            <div class="tally-embed" 
+                 data-tally-embed="w2dGYL" 
+                 data-tally-width="100%" 
+                 data-tally-transparent-background="1" 
+                 data-tally-auto-resize="1">
             </div>
+            <script>
+                var d = document, w = window, v = d.body, s = d.createElement('script');
+                s.async = true;
+                s.src = 'https://tally.so/widgets/embed.js';
+                s.onload = function () {
+                    if (typeof Tally === 'object') Tally.loadEmbeds();
+                };
+                v.appendChild(s);
+            </script>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Why Choose AI Avatars -->
     <section class="why-ai-avatars">
