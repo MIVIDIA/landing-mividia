@@ -841,17 +841,16 @@ El contenido profesional parece algo que siempre se deja para después, porque q
     </div>
 </section>
 
-    <!-- Script para eliminar la marca de Tally -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const interval = setInterval(() => {
-            const watermark = document.querySelector('[data-tally-open]');
-            if (watermark) {
-                watermark.remove(); // Elimina la marca
-                clearInterval(interval); // Detiene la búsqueda
-            }
-        }, 300); // Intenta cada 300ms hasta encontrarla
-    });
+   <script>
+  // Espera hasta que el botón de Tally se haya cargado y desactiva su clic
+  const disableTallyClick = setInterval(() => {
+    const btn = document.querySelector('[data-tally-open]');
+    if (btn) {
+      btn.style.pointerEvents = 'none'; // Desactiva clic
+      btn.style.cursor = 'default'; // Cambia el cursor para que no parezca clicable
+      clearInterval(disableTallyClick); // Detiene la comprobación
+    }
+  }, 300); // Revisa cada 300ms
 </script>
 
 
