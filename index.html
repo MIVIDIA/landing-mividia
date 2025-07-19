@@ -838,6 +838,24 @@ El contenido profesional parece algo que siempre se deja para después, porque q
         <div class="form-container">
             <iframe data-tally-src="https://tally.so/embed/w2dGYL?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Tu video profesional, sin cámaras ni complicaciones!"></iframe>
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <!-- Capa invisible para bloquear clic en el botón de Tally -->
+<div style="
+  position: relative;
+  margin-top: -45px; /* Ajusta este valor según dónde aparezca el botón en tu caso */
+  height: 0;
+  z-index: 10;
+">
+  <div style="
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;  /* Ajusta el ancho del área que cubre el botón */
+    height: 45px;   /* Ajusta la altura según el botón */
+    pointer-events: all;
+    background: transparent;
+  "></div>
+</div>
+
         </div>
     </div>
 </section>
